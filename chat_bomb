@@ -1,0 +1,12 @@
+On Error Resume Next
+Dim wsh,ye
+set wsh=createobject("wscript.shell")
+wscript.sleep 3000
+for i=1 to 5
+wscript.sleep 200
+wsh.AppActivate("三剑客 (3)")
+wsh.sendKeys "^v"
+wsh.sendKeys i
+wsh.sendKeys "%s"
+next
+wscript.quit
